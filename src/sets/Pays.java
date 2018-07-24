@@ -23,7 +23,7 @@ public class Pays {
 		String pibParHabitantFormate = StringUtils.format(PIB, "#,###.00");
 		String pibTotalFormate = StringUtils.format(PibTotal, "#,###.00");
 		return nom + " -> " + nombreHabitantsFormate + " habitants -> " + "PIB/habitant = " + pibParHabitantFormate + " $" +
-		" -> PIB Total = " + pibTotalFormate + " $";
+		" -> PIB Total = " + pibTotalFormate + " $\n";
 	}
 	
 	public String getNom() {

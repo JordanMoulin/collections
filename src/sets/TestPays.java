@@ -17,6 +17,7 @@ public class TestPays {
 		pays.add(new Pays("Chine", 1_415_140_963, 14_107.431));
 		pays.add(new Pays("Russie", 146_880_400, 24_026));
 		pays.add(new Pays("Inde", 1_281_935_911, 5_855.306));
+		
 		ArrayList<Pays> listP = new ArrayList<>();
 		listP.addAll(pays);
 		
@@ -41,6 +42,13 @@ public class TestPays {
 		//System.out.println(listP.get(index));
 		
 		/** Mettre en majuscule le pays avec le plus petit PIB */
-		
+		for(int i=0; i<listP.size();i++){
+			if(listP.get(i).getPibTotal()<PIBtotal){
+				PIBtotal = listP.get(i).getPibTotal();
+				index = i;
+			}
+		}
+		listP.get(index).setNom(listP.get(index).getNom().toUpperCase());;
+		System.out.println(listP);
 	}
 }
