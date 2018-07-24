@@ -1,5 +1,6 @@
 package sets;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class TestSetInt {
@@ -16,31 +17,34 @@ public class TestSetInt {
 		entiers.add(4);
 		entiers.add(8);
 		entiers.add(5);
-
-		/** recherche le plus petit élément de la liste */
-		for(int i=0;i<entiers.size()-1;i++){
-			if(min>entiers.)
-				min=entiers.hashCode();
-		}
-		System.out.println(min);
-
-		//		/** recherche le plus grand élément de la liste */
-		//		for(int i=0;i>entiers.size()-1;i++){
-		//			if(max>entiers.get(i))
-		//				max=entiers.get(i);
-		//		}
-		//		//System.out.println(min);
-		//
-		//		/** recherche les éléments négatifs et les modifis */
-		//		for(int i=0;i<entiers.size()-1;i++){
-		//			if(entiers.get(i)<0){
-		//				entiers.set(i,-entiers.get(i));
-		//			}
-		//		}
+		
+		ArrayList<Integer> list = new ArrayList<>();
 		
 		/** affiche tous les éléments de la liste */
 		for (Integer monElement : entiers) {
 			System.out.println(monElement);
+			list.add(monElement);
+		}
+		
+		/** recherche le plus petit élément de la liste */
+		for(int i=0;i<list.size();i++){
+			if(min>list.get(i))
+				min=list.get(i);
+		}
+		System.out.println("\n"+min);
+
+		/** recherche le plus grand élément de la liste */
+		for(int i=0;i<list.size();i++){
+			if(max<list.get(i))
+				max=list.get(i);
+		}
+		System.out.println("\n"+max);
+
+		/** recherche les éléments négatifs et les modifis */
+		for(int i=0;i<list.size();i++){
+			if(list.get(i)<0){
+				list.set(i,-list.get(i));
+			}
 		}
 	}
 }

@@ -1,9 +1,11 @@
 package listes;
 
 public class Ville {
+	/** Attributs */
 	String nom;
 	int nbHabitants;
 	
+	/** Constructeur avec paramétres */
 	public Ville(String nom, int nbHabitants) {
 		this.nom = nom;
 		this.nbHabitants = nbHabitants;
